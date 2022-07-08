@@ -1,16 +1,16 @@
 #   说明文档
 ##    项目要求
     完成经典算法，基于视频处理，鼠标交互(或其他交互方式)不适用深度学习
-##代码实现功能
+##    代码实现功能
     通过sift和鼠标交互实现视频第一帧圈定物体的跟踪
-##代码依赖环境
+##    代码依赖环境
 Python'=='3.7（64-bit)<br>
 numpy'=='1.19.4<br>
 cv2'=='4.6.0.66<br>
 time库<br>
 math库<br>
-##python代码
-###鼠标交互画框
+##    python代码
+###    鼠标交互画框
 ```python
 def get_tr(img):
     mouse_params = {'x': None, 'width': None, 'height': None,
@@ -51,7 +51,7 @@ img = frame
 rect, temp = get_tr(img)
 image = frame[rect[0]:rect[0]+rect[2],rect[1]:rect[1]+rect[3]]
 ```
-###sift特征匹配
+###    sift特征匹配
 ```python
 def matchSift(findimg, img):
     """转换成灰度图片"""
@@ -91,8 +91,8 @@ def matchSift(findimg, img):
     return canvas
 found = matchSift(image, frame)
 ```
-###处理视频取每一帧并且输出找到的画框图案
-···Python
+###    处理视频取每一帧并且输出找到的画框图案
+```Python
 def readVideo(videopath, image):
     # 打开视频文件：在实例化的同时进行初始化
     cap = cv2.VideoCapture("C:/Users/95856/Desktop/t3.mp4")
@@ -124,7 +124,7 @@ def readVideo(videopath, image):
     # 关掉所有已打开的GUI窗口
     cv2.destroyAllWindows()
 ```
-###主函数
+###    主函数
 ```python
 if __name__=="__main__":
     # 要匹配图片的路径
