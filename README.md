@@ -9,6 +9,8 @@ numpy'=='1.19.4<br>
 cv2'=='4.6.0.66<br>
 time库<br>
 math库<br>
+##    算法原理
+
 ##    python代码
 ###    鼠标交互画框
 ```python
